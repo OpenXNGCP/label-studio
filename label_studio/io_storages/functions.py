@@ -9,6 +9,7 @@ from .azure_blob.api import AzureBlobExportStorageListAPI, AzureBlobImportStorag
 from .gcs.api import GCSExportStorageListAPI, GCSImportStorageListAPI
 from .redis.api import RedisExportStorageListAPI, RedisImportStorageListAPI
 from .s3.api import S3ExportStorageListAPI, S3ImportStorageListAPI
+from .oss2.api import Oss2ExportStorageListAPI, Oss2ImportStorageListAPI
 
 logger = logging.getLogger(__name__)
 
@@ -89,6 +90,12 @@ def get_storage_list():
             'title': 'Redis',
             'import_list_api': RedisImportStorageListAPI,
             'export_list_api': RedisExportStorageListAPI,
+        },
+        {
+            'name': 'oss2',
+            'title': 'Alibaba Cloud OSS',
+            'import_list_api': Oss2ImportStorageListAPI,
+            'export_list_api': Oss2ExportStorageListAPI,
         },
     ]
 

@@ -230,6 +230,7 @@ INSTALLED_APPS = [
     'tasks',
     'data_manager',
     'io_storages',
+    'io_storages.oss2',
     'ml',
     'webhooks',
     'labels_manager',
